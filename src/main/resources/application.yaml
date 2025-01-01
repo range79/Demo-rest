@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: demo1
+  datasource:
+    url: jdbc:mysql://localhost:3306/testdb
+    username: range
+    password: somepass
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+springdoc:
+  api-docs:
+   path: /v3/api-docs
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
