@@ -8,3 +8,14 @@ services:
       - 'MYSQL_USER=range'
     ports:
       - '3306:3306'
+  app:
+   build: .
+   environment:
+     - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/testdb
+     - SPRING_DATASOURCE_USERNAME=range
+     - SPRING_DATASOURCE_PASSWORD=somepass
+     - SERVER_PORT=8080
+   depends_on:
+     -  mysql
+   ports:
+     - '8080:8080'
