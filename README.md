@@ -42,7 +42,7 @@ Uygulama başlatıldığında, API'ye aşağıdaki URL üzerinden erişebilirsin
 
 ## APi Dokümantasyonu(Swagger-ui)
 
-Uygulamanın Swagger-ui Endpointi: 
+Uygulamanın Swagger-ui Endpointi:
 
 - [Swagger-ui](http://localhost:8080/swagger-ui/index.html)
 
@@ -60,13 +60,13 @@ Proje, Docker Compose kullanarak başlatmaktadır.    Uygulama, aşağıdaki `co
 1. **Docker Compose ile Projeyi Başlatma**:
    ```bash
    docker-compose up
-   
-### Version degisiklikleri 
-1. **Version 0.0.1**
-    -ilk sürüm olduğundan çokta fazla sey eklemedimç
 
-    
-    
+### Version degisiklikleri
+1. **Version 0.0.1**
+   -ilk sürüm olduğundan çokta fazla sey eklemedimç
+
+
+
 2. **Version 1.1.0**
-  -Bu sürümde Docker ile tam uygulama başlatma desteği ve Banner eklenmiştir.
+   -Bu sürümde Docker ile tam uygulama başlatma desteği ve Banner eklenmiştir ve readme düzeltildi.
 
