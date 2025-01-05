@@ -1,4 +1,6 @@
-FROM openjdk:17 
-COPY build/libs/demo1-1.1.0.jar /app/demo.jar
+FROM openjdk:17
+COPY . /app
 WORKDIR /app/
-CMD ["java", "-jar", "demo.jar"]
+RUN ./gradlew build --no-deamon
+CD Demo-rest/.gradle/build/libs \
+CMD["java","-jar","demo1-1.1.0.jar"]
