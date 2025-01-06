@@ -18,20 +18,7 @@ Bu proje, Spring Boot kullanarak geliştirilmiş bir REST API örneğidir. Amac�
 Proje, Spring Boot kullanılarak geliştirilmiştir. Aşağıdaki adımları izleyerek projeyi kurabilir ve çalıştırabilirsiniz.
 
 1. **Java ve Maven Kurulumu**:
-    - Projeyi çalıştırmadan önce, Java ve Maven'ın sisteminizde yüklü olduğundan emin olun.
-
-2. **Bağımlılıkların İndirilmesi**:
-    - Terminal veya komut satırında aşağıdaki komutu çalıştırarak bağımlılıkları indirin:
-      ```bash
-      ./gradlew build 
-      ```
-
-3. **Uygulamanın Çalıştırılması**:
-    - Spring Boot uygulamasını çalıştırmak için aşağıdaki komutu kullanın:
-      ```bash
-      ./gradlew bootrun
-      ```
-
+    - Projeyi çalıştırmadan önce, Java ve Maven'ın sisteminizde yüklü olduğundan emin olun.(eger docker kullanmıyacaksanız)
 ## Kullanım
 
 Uygulama başlatıldığında, API'ye aşağıdaki URL üzerinden erişebilirsiniz:
@@ -63,10 +50,22 @@ Proje, Docker Compose kullanarak başlatmaktadır.    Uygulama, aşağıdaki `co
 
 ### Version degisiklikleri
 1. **Version 0.0.1**
-   -ilk sürüm olduğundan çokta fazla sey eklemedimç
+   - ilk sürüm olduğundan çokta fazla sey eklemedimç
 
 
 
 2. **Version 1.1.0**
-   -Bu sürümde Docker ile tam uygulama başlatma desteği ve Banner eklenmiştir ve readme düzeltildi.
-
+   - Bu sürümde Docker ile tam uygulama başlatma desteği ve Banner eklenmiştir ve readme düzeltildi.
+3. **Version 1.2.0**  
+   - Bu sürümde Docker içinde uygulama derleneniyor ve başlıyor eger docker compose olmadan derlemek ıstıyorsanız
+ 
+   #### MYSQL varsa çalışan
+```shell
+ ./gradlew  build  
+ ```
+ #### MYSQL çalıştırmadan derlemek ıstıyorsanız 
+```shell
+ ./gradlew build -x test
+```
+   - composefile  duzenlendi 
+   - gelen guncellemede security eklicem
