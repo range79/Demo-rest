@@ -19,5 +19,7 @@ public class User {
     @Column(nullable = false)
     @Size(min = 8,message = "Please make your password 8+ characters for security reasons.")
     private String password;
-
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private Role role;
 }

@@ -1,5 +1,6 @@
 package com.example.demo.Service.IMPL;
 
+import com.example.demo.Model.Role;
 import com.example.demo.Model.User;
 import com.example.demo.Repository.UserRepo;
 import com.example.demo.Service.UserService;
@@ -25,7 +26,7 @@ public class UserServiceIMPL implements UserService {
         if (userRepo.existsByUsername(user.getUsername())) {
             throw new RuntimeException("User already exists with username: " + user.getUsername());
         }
-
+        user.setRole(Role.USER);
         return userRepo.save(user);
     }
 

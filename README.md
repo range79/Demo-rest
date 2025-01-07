@@ -13,6 +13,7 @@ Bu proje, Spring Boot kullanarak geliştirilmiş bir REST API örneğidir. Amac�
 - **Spring Boot DevTools**: Geliştirme sürecini hızlandırmak için otomatik yeniden başlatma ve diğer araçları sağlar.
 - **Docker** Docker uygulamayı ızole ortamda çalışmasını sağlar.
 - **Docker-compose** Birden fazla Docker uygulamasını aynı anda başlatmamı sağlar.
+- **Spring security** Güvenlık saglamak içın kullanIrim
 ## Kurulum
 
 Proje, Spring Boot kullanılarak geliştirilmiştir. Aşağıdaki adımları izleyerek projeyi kurabilir ve çalıştırabilirsiniz.
@@ -69,3 +70,6 @@ Proje, Docker Compose kullanarak başlatmaktadır.    Uygulama, aşağıdaki `co
 ```
    - composefile  duzenlendi 
    - gelen guncellemede security eklicem
+4. **Version 2.0**
+   - Security eklendi ama securitye role gerektiren endpointler ayarlanmadi onlari gelen güncellemede ayarlıyacam
+   - Roller enumu eklendı
