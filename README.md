@@ -73,3 +73,5 @@ Proje, Docker Compose kullanarak başlatmaktadır.    Uygulama, aşağıdaki `co
 4. **Version 2.0**
    - Security eklendi ama securitye role gerektiren endpointler ayarlanmadi onlari gelen güncellemede ayarlıyacam
    - Roller enumu eklendı
+5. **Version 2.0,1**
+  - Jwtden vazgectim bu uygulamada jwt kullanmiyacagim
