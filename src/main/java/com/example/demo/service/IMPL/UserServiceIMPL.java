@@ -1,15 +1,18 @@
-package com.example.demo.Service.IMPL;
+package com.example.demo.service.IMPL;
 
-import com.example.demo.Model.User;
-import com.example.demo.Repository.UserRepo;
-import com.example.demo.Service.UserService;
+import com.example.demo.dto.UserRequestDto;
+import com.example.demo.exception.UpdateException;
+import com.example.demo.model.User;
+import com.example.demo.repository.UserRepo;
+import com.example.demo.service.UserService;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class UserServiceIMPL implements UserService {
-    private UserRepo userRepo;
+    private final UserRepo userRepo;
 
     public UserServiceIMPL(UserRepo userRepo) {
         this.userRepo = userRepo;
@@ -37,12 +40,25 @@ public class UserServiceIMPL implements UserService {
     }
 
     @Override
-    public String updateUser(User user) {
-        User exitinguser = userRepo.findById(user.getId()).orElseThrow(()->new RuntimeException("user not found"));
-        exitinguser.setUsername(user.getUsername());
-        exitinguser.setPassword(user.getPassword());
-        return "User with "+exitinguser.getId()+" id updated";
+    public String changePassword(UserRequestDto userRequestDto) {
+   User findUser =userRepo.findById(userRequestDto.getId()).orElseThrow(()->new RuntimeException("user not found"));
 
+   if(findUser.getPassword().equals(userRequestDto.getPassword())
+           &&findUser.getUsername().equals(userRequestDto.getUsername())){
+
+       try {
+           findUser.setPassword(userRequestDto.getNewPassword());
+
+           userRepo.save(findUser);
+           return "User "+findUser.getUsername()+" password changed";
+       }catch (Exception e){
+           throw new UpdateException(e.getMessage(), HttpStatus.BAD_REQUEST);
+       }
+
+   }
+   else {
+       throw new UpdateException("Password does not match", HttpStatus.BAD_REQUEST);
+   }
     }
 
     @Override

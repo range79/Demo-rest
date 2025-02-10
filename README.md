@@ -45,6 +45,11 @@ Proje, Docker üzerinden çalıştırılabilir. Docker Compose kullanılarak ger
 
 Proje, Docker Compose kullanarak veritabanını başlatmaktadır. MySQL veritabanı, aşağıdaki `docker-compose.yml` dosyası ile çalıştırılmaktadır:
 
-1. **Docker Compose ile Projeyi Başlatma**:
-   ```bash
-   docker-compose up
+**Version 0.0.1-snapshot**
+- ilk sürüm olduğundan çokta fazla sey eklemedim.
+**Version 1.0.0**
+- bu sürümde docker ıle tüm projenın buıld edılmesını gereksız buldugumdan sadece mysqlin docker tarafından calışmasını sagladım
+- Exception paketi eklendi
+- Dto paketi eklendi
+- GlobalExceptionHandler eklendi
+- updateUser->Updatepassworda değisitirildi

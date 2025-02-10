@@ -1,8 +1,9 @@
-package com.example.demo.Controller;
+package com.example.demo.controller;
 
-import com.example.demo.Model.User;
-import com.example.demo.Service.IMPL.UserServiceIMPL;
-import com.example.demo.Service.UserService;
+import com.example.demo.dto.UserRequestDto;
+import com.example.demo.model.User;
+import com.example.demo.service.UserService;
+import org.apache.coyote.Response;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,16 +11,17 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping( "/user")
 public class UserController {
 
-    private final UserServiceIMPL userServiceIMPL;
+    private final UserService userService;
 
-    public UserController( UserServiceIMPL userServiceIMPL) {
-        this.userServiceIMPL = userServiceIMPL;
+    public UserController( UserService userService) {
+     this.userService = userService;
+
     }
 
     @GetMapping("/users")
     public Object getUsers() {
         try{
-            return ResponseEntity.ok(userServiceIMPL.getAllUsers());
+            return ResponseEntity.ok(userService.getAllUsers());
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
@@ -29,21 +31,18 @@ public class UserController {
     @GetMapping("/{id}")
     public Object getUser(@PathVariable Long id) {
         try{
-            return userServiceIMPL.getUserById(id);
+            return ResponseEntity.ok().body(userService.getUserById(id));
         }catch (RuntimeException e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
-    }
-    @GetMapping("/user-role/{Role}")
-    public Object getUserByRole(@PathVariable String Role) {
-        return null;
     }
 
 
     @PostMapping()
     public ResponseEntity<Object> createUser(@RequestBody User user) {
+
         try{
-            userServiceIMPL.registerUser(user);
+            userService.registerUser(user);
             return ResponseEntity.ok("user created");
         }catch (RuntimeException e) {
             return ResponseEntity.badRequest().body(e.getMessage());
@@ -56,17 +55,20 @@ public class UserController {
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<Object> deleteUser(@PathVariable Long id) {
         try{
-            userServiceIMPL.deleteUser(id);
+            userService.deleteUser(id);
+
             return ResponseEntity.ok().body("User deleted successfully");
         } catch (RuntimeException e) {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
     @PatchMapping
-    public ResponseEntity<Object> updateUser(@RequestBody User user) {
+    public ResponseEntity<Object> updatePassword(@RequestBody UserRequestDto userRequestDto) {
         try{
-            userServiceIMPL.updateUser(user);
-            return ResponseEntity.ok().body("User updated successfully");
+
+            userService.changePassword(userRequestDto);
+
+            return ResponseEntity.ok().body(userService.changePassword(userRequestDto));
         }
         catch (RuntimeException e) {
             return ResponseEntity.badRequest().body(e.getMessage());

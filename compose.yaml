@@ -1,16 +1,4 @@
 services:
-
-  app:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    ports:
-      - '8080:8080'
-    depends_on:
-      - db
-    networks:
-      - app-network
-
   db:
     image: 'mysql:latest'
     environment:
@@ -20,9 +8,3 @@ services:
       - 'MYSQL_USER=range'
     ports:
       - '3306:3306'
-    networks:
-      - app-network
-networks:
- app-network:
-   driver: bridge
-
