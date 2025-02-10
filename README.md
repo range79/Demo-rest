@@ -47,7 +47,7 @@ Proje, Docker Compose kullanarak veritabanını başlatmaktadır. MySQL veritaba
 
 **Version 0.0.1-snapshot**
 - ilk sürüm olduğundan çokta fazla sey eklemedim.
-**Version 1.0.0**
+**Version 1.0.0-SNAPSHOT**
 - bu sürümde docker ıle tüm projenın buıld edılmesını gereksız buldugumdan sadece mysqlin docker tarafından calışmasını sagladım
 - Exception paketi eklendi
 - Dto paketi eklendi
