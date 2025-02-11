@@ -4,9 +4,9 @@ import lombok.Getter;
 import org.springframework.http.HttpStatus;
 @Getter
 public class UpdateException extends RuntimeException {
-  private final HttpStatus status;
-  public UpdateException(String message, HttpStatus status) {
+
+  public UpdateException(String message) {
         super("can't update User " + message);
-        this.status = status;
+
     }
 }

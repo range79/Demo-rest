@@ -53,3 +53,9 @@ Proje, Docker Compose kullanarak veritabanını başlatmaktadır. MySQL veritaba
 - Dto paketi eklendi
 - GlobalExceptionHandler eklendi
 - updateUser->Updatepassworda değisitirildi
+**Version 1.1.0**
+- bu sürümde Servıceye düzenlemeler yapıldı
+- UserResponseDto EKlendı 
+- ErrorResponse Paketı eklendı
+- GlobalExceptıon handlerden duzenlemeler yapıldı
+- Controllere duzenlemeler yapıldı
