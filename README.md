@@ -45,19 +45,37 @@ Proje, Docker üzerinden çalıştırılabilir. Docker Compose kullanılarak ger
 
 Proje, Docker Compose kullanarak veritabanını başlatmaktadır. MySQL veritabanı, aşağıdaki `docker-compose.yml` dosyası ile çalıştırılmaktadır:
 
-**Version 0.0.1-snapshot**
-- ilk sürüm olduğundan çokta fazla sey eklemedim.
+# 📌 Sürüm Notları
 
-**Version 1.0.0-SNAPSHOT**
-- bu sürümde docker ıle tüm projenın buıld edılmesını gereksız buldugumdan sadece mysqlin docker tarafından calışmasını sagladım
-- Exception paketi eklendi
-- Dto paketi eklendi
-- GlobalExceptionHandler eklendi
-- updateUser->Updatepassworda değisitirildi
+## **Version 0.0.1-SNAPSHOT**
+- İlk sürüm olduğu için temel fonksiyonlar eklendi.
 
-**Version 1.1.0**
-- bu sürümde Servıceye düzenlemeler yapıldı
-- UserResponseDto EKlendı 
-- ErrorResponse Paketı eklendı
-- GlobalExceptıon handlerden duzenlemeler yapıldı
-- Controllere duzenlemeler yapıldı
+---
+
+## **Version 1.0.0-SNAPSHOT**
+### ✅ **Docker Optimizasyonu**
+- Tüm projeyi Docker ile build etmek yerine yalnızca MySQL’in Docker üzerinden çalışması sağlandı.
+
+### ✅ **Yeni Paketler & Yapılandırmalar**
+- **Exception paketi** eklendi.
+- **DTO paketi** oluşturuldu.
+- **GlobalExceptionHandler** eklendi.
+
+### ✅ **Metot Güncellemeleri**
+- `updateUser` metodu, yalnızca şifre güncelleme işlemi yapacak şekilde `updatePassword` olarak değiştirildi.
+
+---
+
+## **Version 1.1.0**
+### ✅ **Service Katmanı Düzenlemeleri**
+- Service katmanında optimizasyonlar yapıldı.
+
+### ✅ **Yeni DTO'lar Eklendi**
+- **UserResponseDto** eklendi.
+- **ErrorResponse** paketi eklendi.
+
+### ✅ **Exception Yönetimi Geliştirildi**
+- **GlobalExceptionHandler** üzerinde iyileştirmeler yapıldı.
+
+### ✅ **Controller Güncellemeleri**
+- Controller katmanında düzenlemeler ve iyileştirmeler yapıldı.
