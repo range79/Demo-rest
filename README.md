@@ -47,35 +47,53 @@ Proje, Docker Compose kullanarak veritabanını başlatmaktadır. MySQL veritaba
 
 # 📌 Sürüm Notları
 
-## **Version 0.0.1-SNAPSHOT**
-- İlk sürüm olduğu için temel fonksiyonlar eklendi.
+---
+
+## 🚀 **Version 0.0.1-SNAPSHOT**
+✔ İlk sürüm yayımlandı, **temel fonksiyonlar** eklendi.
 
 ---
 
-## **Version 1.0.0-SNAPSHOT**
-### ✅ **Docker Optimizasyonu**
-- Tüm projeyi Docker ile build etmek yerine yalnızca MySQL’in Docker üzerinden çalışması sağlandı.
+## 🎯 **Version 1.0.0-SNAPSHOT**
 
-### ✅ **Yeni Paketler & Yapılandırmalar**
-- **Exception paketi** eklendi.
-- **DTO paketi** oluşturuldu.
-- **GlobalExceptionHandler** eklendi.
+### 🛠 **Docker Optimizasyonu**
+🔹 Tüm proje yerine **yalnızca MySQL’in Docker üzerinden çalışması** sağlandı.
 
-### ✅ **Metot Güncellemeleri**
-- `updateUser` metodu, yalnızca şifre güncelleme işlemi yapacak şekilde `updatePassword` olarak değiştirildi.
+### 📂 **Yeni Paketler & Yapılandırmalar**
+✅ **`exception`** paketi eklendi.  
+✅ **`dto`** paketi oluşturuldu.  
+✅ **GlobalExceptionHandler** sınıfı eklendi.
+
+### 🔄 **Metot Güncellemeleri**
+🔹 `updateUser` metodu, sadece şifre güncelleme işlemi yapacak şekilde **`updatePassword`** olarak değiştirildi.
 
 ---
 
-## **Version 1.1.0**
-### ✅ **Service Katmanı Düzenlemeleri**
-- Service katmanında optimizasyonlar yapıldı.
+## 🚀 **Version 1.1.0**
 
-### ✅ **Yeni DTO'lar Eklendi**
-- **UserResponseDto** eklendi.
-- **ErrorResponse** paketi eklendi.
+### ⚡ **Service Katmanı Optimizasyonları**
+🔹 Service katmanında performans iyileştirmeleri yapıldı.
 
-### ✅ **Exception Yönetimi Geliştirildi**
-- **GlobalExceptionHandler** üzerinde iyileştirmeler yapıldı.
+### 🏗 **Yeni DTO'lar**
+✅ **`UserResponseDto`** eklendi.  
+✅ **`ErrorResponse`** eklendi.
 
-### ✅ **Controller Güncellemeleri**
-- Controller katmanında düzenlemeler ve iyileştirmeler yapıldı.
+### 🚨 **Exception Yönetimi Güncellendi**
+🔹 **GlobalExceptionHandler** üzerinde daha kapsamlı hata yakalama mekanizmaları eklendi.
+
+### 🎛 **Controller Güncellemeleri**
+🔹 **UserController** içinde kod refaktör edildi ve iyileştirmeler yapıldı.
+
+---
+
+## 🔐 **Version 1.2.0**
+
+### ✅ **Validation Geliştirmeleri**
+🔹 **Validation kütüphanesi** projeye eklendi.  
+🔹 **Şifre güvenliği artırıldı** → **Minimum 8 karakter** olmalı.
+
+### 🆕 **Yeni DTO Güncellemeleri**
+✅ **`UserRegisterRequest`** DTO’su eklendi.
+
+### 🛠 **Service Güncellemeleri**
+🔹 **`UserServiceImpl`** içinde kod düzenlemeleri ve optimizasyonlar yapıldı.  

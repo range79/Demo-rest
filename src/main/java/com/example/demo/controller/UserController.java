@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.dto.UserRegisterRequest;
 import com.example.demo.dto.UserRequestDto;
 import com.example.demo.model.User;
 import com.example.demo.service.UserService;
@@ -39,7 +40,7 @@ public class UserController {
 
 
     @PostMapping("/register")
-    public ResponseEntity<Object> createUser(@RequestBody @Valid User user) {
+    public ResponseEntity<Object> createUser(@RequestBody @Valid UserRegisterRequest user) {
 
 
         return ResponseEntity.ok(userService.registerUser(user));

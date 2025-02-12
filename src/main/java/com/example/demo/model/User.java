@@ -1,6 +1,7 @@
 package com.example.demo.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -26,6 +27,7 @@ public class User {
     @Size(min = 8,message = "Please make your password 8+ characters for security reasons.")
     @NotBlank(message = "Password can't be blank")
     @NotNull(message = "Password can't be null")
+    @Valid
     private String password;
 
 }
