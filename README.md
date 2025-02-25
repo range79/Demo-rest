@@ -65,7 +65,7 @@ Proje, Docker Compose kullanarak veritabanını başlatmaktadır. MySQL veritaba
 ✅ **GlobalExceptionHandler** sınıfı eklendi.
 
 ### 🔄 **Metot Güncellemeleri**
-🔹 `updateUser` metodu, sadece şifre güncelleme işlemi yapacak şekilde **`updatePassword`** olarak değiştirildi.
+🔹 `updateUser` metodu, yalnızca şifre güncelleme işlemi yapacak şekilde **`updatePassword`** olarak değiştirildi.
 
 ---
 
@@ -90,10 +90,24 @@ Proje, Docker Compose kullanarak veritabanını başlatmaktadır. MySQL veritaba
 
 ### ✅ **Validation Geliştirmeleri**
 🔹 **Validation kütüphanesi** projeye eklendi.  
-🔹 **Şifre güvenliği artırıldı** → **Minimum 8 karakter** olmalı.
+🔹 **Şifre güvenliği artırıldı** → **Minimum 8 karakter olmalı.**
 
 ### 🆕 **Yeni DTO Güncellemeleri**
 ✅ **`UserRegisterRequest`** DTO’su eklendi.
 
 ### 🛠 **Service Güncellemeleri**
-🔹 **`UserServiceImpl`** içinde kod düzenlemeleri ve optimizasyonlar yapıldı.  
+🔹 **`UserServiceImpl`** içinde kod düzenlemeleri ve optimizasyonlar yapıldı.
+
+---
+
+## 🔐 **Version 1.3.0**
+
+### 🔒 **Güvenlik Geliştirmeleri**
+🔹 **`getAllUsers` metodu** daha güvenli hale getirildi; artık **`User`** nesnesi yerine **`UserResponseDto`** döndürüyor.  
+🔹 **`changePassword` metodu** güncellendi; artık şifre ile birlikte kullanıcı adı da değiştirilebiliyor.  
+🔹 **`getById` metodu** daha güvenli hale getirildi.
+
+### 🛠 **Diğer Güncellemeler**
+🔹 **`impl` paketi** artık küçük harf ile yazılıyor.  
+🔹 **Controller sınıfında dönüş tipleri düzenlendi**, kod daha okunaklı hale getirildi.
+

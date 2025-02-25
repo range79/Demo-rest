@@ -10,8 +10,7 @@ import lombok.Setter;
 @Setter
 public class UserRequestDto {
 
-    @NotNull(message = "ID can't be null")
-    private Long id;
+
     @NotBlank(message = "Username can't be blank")
     @NotNull(message = "Username can't be null")
     private String username;
