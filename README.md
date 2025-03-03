@@ -28,7 +28,7 @@ Proje, Spring Boot kullanılarak geliştirilmiştir. Aşağıdaki adımları izl
 3. **Uygulamanın Çalıştırılması**:
     - Spring Boot uygulamasını çalıştırmak için aşağıdaki komutu kullanın:
       ```bash
-     ./gradlew bootrun
+        ./gradlew bootrun
       ```
 
 ## Kullanım
