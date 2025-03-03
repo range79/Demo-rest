@@ -1,6 +1,7 @@
 spring:
   application:
     name: demo1
+    version: 2.0.0
   datasource:
     url: jdbc:mysql://mysql:3306/testdb
     username: range
@@ -8,6 +9,7 @@ spring:
   jpa:
     hibernate:
       ddl-auto: create-drop
+
 springdoc:
   api-docs:
    path: /v3/api-docs

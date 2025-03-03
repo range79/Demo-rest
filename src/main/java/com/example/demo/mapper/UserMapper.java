@@ -14,7 +14,7 @@ public static User toEntity(UserRequestDto userRequestDto) {
   return user;
 }
 public static UserResponseDto toUserResponseDto(User user) {
-    UserResponseDto userResponseDto = new UserResponseDto(user.getId(), user.getUsername());
+    UserResponseDto userResponseDto = new UserResponseDto(user.getId(), user.getUsername(),user.getRole());
     return userResponseDto;
 }
 

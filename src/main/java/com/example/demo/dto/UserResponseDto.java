@@ -1,5 +1,6 @@
 package com.example.demo.dto;
 
+import com.example.demo.model.Role;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -8,7 +9,8 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 public class UserResponseDto {
-    Long id;
-    String name;
+    private Long id;
+    private String name;
+    private Role role;
 
 }

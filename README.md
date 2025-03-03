@@ -16,19 +16,19 @@ Bu proje, Spring Boot kullanarak geliştirilmiş bir REST API örneğidir. Amac�
 
 Proje, Spring Boot kullanılarak geliştirilmiştir. Aşağıdaki adımları izleyerek projeyi kurabilir ve çalıştırabilirsiniz.
 
-1. **Java ve Maven Kurulumu**:
-    - Projeyi çalıştırmadan önce, Java ve Maven'ın sisteminizde yüklü olduğundan emin olun.
+1. **Java ve Gradle Kurulumu**:
+    - Projeyi çalıştırmadan önce, Java ve gradlenin'ın sisteminizde yüklü olduğundan emin olun.
 
 2. **Bağımlılıkların İndirilmesi**:
     - Terminal veya komut satırında aşağıdaki komutu çalıştırarak bağımlılıkları indirin:
       ```bash
-      ./mvnw install
+      ./gradlew build
       ```
 
 3. **Uygulamanın Çalıştırılması**:
     - Spring Boot uygulamasını çalıştırmak için aşağıdaki komutu kullanın:
       ```bash
-      ./mvnw spring-boot:run
+     ./gradlew bootrun
       ```
 
 ## Kullanım
@@ -74,14 +74,14 @@ Proje, Docker Compose kullanarak veritabanını başlatmaktadır. MySQL veritaba
 ### ⚡ **Service Katmanı Optimizasyonları**
 🔹 Service katmanında performans iyileştirmeleri yapıldı.
 
-### 🏗 **Yeni DTO'lar**
+### 🏧 **Yeni DTO'lar**
 ✅ **`UserResponseDto`** eklendi.  
 ✅ **`ErrorResponse`** eklendi.
 
 ### 🚨 **Exception Yönetimi Güncellendi**
-🔹 **GlobalExceptionHandler** üzerinde daha kapsamlı hata yakalama mekanizmaları eklendi.
+🔹 **GlobalExceptionHandler** üzerinde daha kapsamılı hata yakalama mekanizmaları eklendi.
 
-### 🎛 **Controller Güncellemeleri**
+### 🌛 **Controller Güncellemeleri**
 🔹 **UserController** içinde kod refaktör edildi ve iyileştirmeler yapıldı.
 
 ---
@@ -100,7 +100,7 @@ Proje, Docker Compose kullanarak veritabanını başlatmaktadır. MySQL veritaba
 
 ---
 
-## 🔐 **Version 1.3.0**
+## 🔒 **Version 1.3.0**
 
 ### 🔒 **Güvenlik Geliştirmeleri**
 🔹 **`getAllUsers` metodu** daha güvenli hale getirildi; artık **`User`** nesnesi yerine **`UserResponseDto`** döndürüyor.  
@@ -111,3 +111,27 @@ Proje, Docker Compose kullanarak veritabanını başlatmaktadır. MySQL veritaba
 🔹 **`impl` paketi** artık küçük harf ile yazılıyor.  
 🔹 **Controller sınıfında dönüş tipleri düzenlendi**, kod daha okunaklı hale getirildi.
 
+---
+
+## 🚀 **Version 2.0.0**
+
+### 🔧 **Swagger Entegrasyonu**
+🔹 Swagger bilgilerine yeni eklemeler yapıldı.  
+🔹 **Tagler** eklendi, Swagger için daha düzenli görünüm sağlandı.
+
+### 🔒 **Spring Security**
+🔹 **Spring Security** eklendi ve bazı düzenlemeler yapıldı.  
+🔹 **Roller** eklendi, uygulamanın güvenliği artırıldı.
+
+### 🛠 **Kod Yapılandırması**
+🔹 **User Güncelleme ve Bilgisi Alma İşlemleri** ayrı interface'lere bölünüdü, kod karmaşıklığı azaldı.
+
+---
+
+## 🚀 **Version 2.1.0 (Yakında!)**
+
+### 🔒 **JWT Güncellemesi (Önemli Değişiklikler)**
+🔹 **JWT token yönetimi** güncellenecek.  
+🔹 **Refresh token mekanizması** eklenecek.  
+🔹 **Token süreleri ve güvenlik önlemleri** optimize edilecek.  
+🔹 **Mevcut kimlik doğrulama süreçlerinde değişiklikler olabilir**, güncelleme sonrası README'yi kontrol ediniz.  
